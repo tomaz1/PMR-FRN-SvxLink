@@ -9,6 +9,17 @@ and this project adheres to [Semantic Versioning].
 
 - Ideja: da bi imeli več wget ukazov, in bi lahko enostavneje namestili zadevo, tudi samo navodilo bi bilo tako lahko krajše :)
 
+## [0.0.4] - 21.12.2024
+
+### Added
+
+- Dodan github-pages in tema: Tactile z dodatkoma: style.scss in _config.yml (z relative-links pluginom)
+
+### Changed
+
+- obrnjena stran na glavo, kar je bilo na osnovni strani je bilo prestavljeno na dve podstrani
+
+
 ## [0.0.3] - 2024-12-20
 
 ### Changed
@@ -42,7 +53,8 @@ and this project adheres to [Semantic Versioning].
 [semantic versioning]: https://semver.org/spec/v2.0.0.html
 
 <!-- Versions -->
-[unreleased]: https://github.com/tomaz1/PMR-FRN-SvxLink/compare/v0.0.3...HEAD
+[unreleased]: https://github.com/tomaz1/PMR-FRN-SvxLink/compare/v0.0.4...HEAD
+[0.0.4]: https://github.com/tomaz1/PMR-FRN-SvxLink/compare/v0.0.3...v0.0.4
 [0.0.3]: https://github.com/tomaz1/PMR-FRN-SvxLink/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/tomaz1/PMR-FRN-SvxLink/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/tomaz1/PMR-FRN-SvxLink/releases/tag/v0.0.1

@@ -2,9 +2,9 @@
 FRN network with SvxLink on PMR
 
 
-# 1.) [Kaj potrebujemo za PMR - FRN prehod in kako izgleda FRN prehod](Navodila/Kaj-je-FRN-in-slike)
+# 1.) [Kaj potrebujemo za PMR - FRN prehod in kako izgleda FRN prehod](Navodila/Kaj-je-FRN-in-slike.md)
 
-# 2.) [Navodila za postavitev PMR - FRN prehoda](Navodila/RPi3-glavna-navodila)
+# 2.) [Navodila za postavitev PMR - FRN prehoda](Navodila/RPi3-glavna-navodila.md)
 
 # Uporabne povezave
 

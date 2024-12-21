@@ -3,7 +3,7 @@
 
 ### 1.) Poženemo Raspberry Pi Imager
 
-https://www.raspberrypi.com/software/
+[https://www.raspberrypi.com/software/](https://www.raspberrypi.com/software/)
 
 ### 2.) Izberemo "Raspberry Pi OS (other)" → Raspberry Pi OS Lite (**32-bit**)
 
@@ -149,7 +149,7 @@ Vidimo, da je /dev/ttyACM0
 
 ### Nastavitve svxlink.conf (**NI ŠE KONČNA VERZIJA; v delu**):
 
-[Žigova svxlink.conf datoteka !](./etc/svxlink/svxlink.conf) - za Baofeng 888
+[Žigova svxlink.conf datoteka !](../etc/svxlink/svxlink.conf) - za Baofeng 888
 
 
 ```bash
@@ -300,7 +300,7 @@ rm -r ./en_US-heather-16k/
 ### Uredimo logiko, da se avtomatsko požene FRN modul:
 Gre za spremenjeno Tilnovo SimplexLogic.tcl datoteko!
 
-[Datoteka SimplexLogic.tcl](./usr/share/svxlink/events.d/SimplexLogic.tcl)
+[Datoteka SimplexLogic.tcl](../usr/share/svxlink/events.d/SimplexLogic.tcl)
 
 Gre za to, da ob zagonu programa takoj oz. 1 minuto po zagonu SvxLink programa avtomatsko aktivira FRN modul. Če kdo na SvxLinku z DTMF toni aktivira papigo (ali kakšen drug modul) bo le ta aktiven največ minuto, nato bo sistem sam preklopil nazaj v Frn način :)
 
@@ -374,9 +374,9 @@ tail -f /var/log/svxlink
 ## 9.) Nastavitev oddaljenega SSH dostopa preko brskalnika (brez odpiranja portov)
 
 Oddaljen SSH dostop je možen na več načinov, navodila za dostop z uporabo:
-  - [storitve CloudFlare Zero Trust](/Navodila/CloudFlare.md)
-  - [VPN WireGuard](/Navodila/VPN-WireGuard.md)
-  - [storitve Raspberry Pi Connect (TODO)](/Navodila/RPi-Connect.md)
+  - [storitve CloudFlare Zero Trust](CloudFlare.md)
+  - [VPN WireGuard](VPN-WireGuard.md)
+  - [storitve Raspberry Pi Connect (TODO)](RPi-Connect.md)
   
 
 <br>
@@ -386,7 +386,7 @@ Oddaljen SSH dostop je možen na več načinov, navodila za dostop z uporabo:
 
 Če vas radijska postaja sprejema in pošilja v FRN omrežje, vendar se pogosto dogaja, da če ste tiho VOX ne zazna govora in prekine pošiljanje v FRN omrežje? 
 
-[Nadgradnja AIOC na firmware 1.3 in uporaba proženja preko HIDRAW namesto preko serijskega porta (Navodilo, povezava na navodila).](Navodila/AIOC-upgrade-FW-to-1.3.md)
+[Nadgradnja AIOC na firmware 1.3 in uporaba proženja preko HIDRAW namesto preko serijskega porta (Navodilo, povezava na navodila).](AIOC-upgrade-FW-to-1.3.md)
 
 ## 11.) 🔌/🔋 Napajanje
 (TODO)
