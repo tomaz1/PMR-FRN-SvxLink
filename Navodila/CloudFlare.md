@@ -16,34 +16,34 @@ Ker ravno uporabljam Cloudflare bom opisal ta način:
 ### 1.) Ustvarimo tunel
 V Zero Trust overview izberete Networks -> Tunnels -> Create a tunnel in ga poljubno poimenujemo :)
 
-![alt text](../img/image-create-tunnel.png)
+![Create tunnel](../img/image-create-tunnel.png)
 
 ### 2.) Nastavimo Public Hostname
 
 Na tunelu, ki smo ga ustvarili kliknemo na zavihek "Public Hostname" in nato Add a public hostname:
 
-![alt text](../img/image-public-hostname.png)
+![public hostname](../img/image-public-hostname.png)
 
 Nato vpišemo poljubno subdomain in v Service SSH in v polje URL vpišemo localhost:
 
-![alt text](../img/image-subdomain.png)
+![subdomain](../img/image-subdomain.png)
 
 ### 3.) Nastavimo pravice za dostop
 V Access -> Applications izberemo Add an application:
 
-![alt text](../img/image-access.png)
+![access](../img/image-access.png)
 
 Nato izberemo Self-hosted in v oknu, ki se pokaže vpišemo in izberemo svojo domeno:
 
-![alt text](../img/image-application-config.png)
+![app config](../img/image-application-config.png)
 
 Nato kliknemo Next in vpišemo:
 
-![alt text](../img/image-access-policy.png)
+![access policy](../img/image-access-policy.png)
 
 Nato kliknemo Next in gremo na dno strani, kjer pri Browser rendering izberemo SSH:
 
-![alt text](../img/image-access-browser-rendering.png)
+![browser SSH](../img/image-access-browser-rendering.png)
 
 Nato končamo z gumbom "Add application"
 
