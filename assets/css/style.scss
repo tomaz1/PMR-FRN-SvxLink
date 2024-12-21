@@ -1,0 +1,22 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.inner {
+  width: 80%;
+}
+
+body {
+  background: #d6d6c2;
+  color: #4d4d4d;
+}
+pre {
+  background: #595d56;
+}
+pre code{
+  background-color: #595d56;
+}
+#container {
+  background: none;
+}
