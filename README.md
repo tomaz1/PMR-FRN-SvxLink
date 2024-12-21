@@ -28,5 +28,9 @@ Novo: GitHub Pages (lepši izgled navodil): [https://tomaz1.github.io/PMR-FRN-Sv
 Datum: 12/2024 
 
 [@Tomaz1](https://github.com/tomaz1) - priprava navodil.
-#### Zgodovina sprememb navodil: [CHANGELOG](CHANGELOG.md)
+
+<br>
+<hr>
+
+##### <sup> * [Zgodovina sprememb navodi](CHANGELOG.md)</sub>
 
