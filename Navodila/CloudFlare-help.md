@@ -33,3 +33,7 @@
     nameserver 8.8.8.8
     nameserver 192.168.0.1
     ```
+
+<hr>
+
+#### [Pojdi nazaj](CloudFlare)

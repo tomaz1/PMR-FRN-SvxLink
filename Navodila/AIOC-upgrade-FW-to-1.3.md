@@ -247,3 +247,6 @@ HYSTERESIS=50
 - [AIOC and SvxLink preko HIDRAW](https://github.com/skuep/AIOC/issues/86).
 
 
+<hr>
+
+#### [Pojdi nazaj](RPI3-glavna-navodila)

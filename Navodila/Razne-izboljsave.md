@@ -27,3 +27,7 @@ chmod +x restartFRN.sh
 #ko potrebujemo restart strežnika poženemo ukaz:
 ./restartFRN.sh
 ```
+
+<hr>
+
+#### [Pojdi nazaj](Rpi3-glavna-navodila)

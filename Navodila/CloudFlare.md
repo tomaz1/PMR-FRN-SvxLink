@@ -16,34 +16,34 @@ Ker ravno uporabljam Cloudflare bom opisal ta način:
 ### 1.) Ustvarimo tunel
 V Zero Trust overview izberete Networks -> Tunnels -> Create a tunnel in ga poljubno poimenujemo :)
 
-![alt text](/img/image-create-tunnel.png)
+![alt text](../img/image-create-tunnel.png)
 
 ### 2.) Nastavimo Public Hostname
 
 Na tunelu, ki smo ga ustvarili kliknemo na zavihek "Public Hostname" in nato Add a public hostname:
 
-![alt text](/img/image-public-hostname.png)
+![alt text](../img/image-public-hostname.png)
 
 Nato vpišemo poljubno subdomain in v Service SSH in v polje URL vpišemo localhost:
 
-![alt text](/img/image-subdomain.png)
+![alt text](../img/image-subdomain.png)
 
 ### 3.) Nastavimo pravice za dostop
 V Access -> Applications izberemo Add an application:
 
-![alt text](/img/image-access.png)
+![alt text](../img/image-access.png)
 
 Nato izberemo Self-hosted in v oknu, ki se pokaže vpišemo in izberemo svojo domeno:
 
-![alt text](/img/image-application-config.png)
+![alt text](../img/image-application-config.png)
 
 Nato kliknemo Next in vpišemo:
 
-![alt text](/img/image-access-policy.png)
+![alt text](../img/image-access-policy.png)
 
 Nato kliknemo Next in gremo na dno strani, kjer pri Browser rendering izberemo SSH:
 
-![alt text](/img/image-access-browser-rendering.png)
+![alt text](../img/image-access-browser-rendering.png)
 
 Nato končamo z gumbom "Add application"
 
@@ -61,7 +61,7 @@ sudo cloudflared service install eyJh... #(ključ)
 ```
 
 Kluč z zgornjim ukazom za namestitev dobimo na cloudflare spletnem naslovu:
-![alt text](img/image-kljuc.png)
+![alt text](../img/image-kljuc.png)
 Po kliku na ikonico se v odlagališče skopirajo vsi ukazi. Uporabimo zadnjega, ker smo prve dva že pognali :smile:
 
 ### 5.) Preverimo delovanje:
@@ -70,15 +70,14 @@ https://ssh.nasadomena.si
 
 In po 2FA CloudFlare prijavi se pokaže okno, kjer se lahko prijavimo na RPi3:
 
-![alt text](/img/image-prijava.png)
+![Prijava v Web SSH](../img/image-prijava.png)
 
 Po vpisu gesla, smo se uspešno logirali:
 
-![alt text](/img/image-ssh-prijava-OK.png)
+![Spletni Web SSH](../img/image-ssh-prijava-OK.png)
 
 TODO: dodati navodilo, kako se prijavimo s certifikatom in kako ga pripravimo.
 
-<br>
 <br>
 
 ## Težave
@@ -86,3 +85,7 @@ TODO: dodati navodilo, kako se prijavimo s certifikatom in kako ga pripravimo.
 - [Ko vse pripravite in odnesete na drugo lokacijo, tunel ne deluje? Deluje vam ping v internet, RPi3 se poveže na FRN omrežje, zakaj ne na CloudFlare?
 ](CloudFlare-help.md)
  
+
+<hr>
+
+#### [Pojdi nazaj](../README)

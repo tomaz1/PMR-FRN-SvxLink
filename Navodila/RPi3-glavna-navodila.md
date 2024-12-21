@@ -410,3 +410,7 @@ Oddaljen SSH dostop je možen na več načinov, navodila za dostop z uporabo:
 Datum: 12/2024 
 
 [@Tomaz1](https://github.com/tomaz1) - priprava navodil.
+
+<hr>
+
+#### [Pojdi nazaj](../README)
