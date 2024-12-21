@@ -62,4 +62,4 @@ journalctl -u wg-quick@wg0
 
 <hr>
 
-#### [Pojdi nazaj](Rpi3-glavna-navodila.md)
+#### [Pojdi nazaj](RPi3-glavna-navodila.md)
