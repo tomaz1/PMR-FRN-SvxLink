@@ -23,7 +23,7 @@
 
     Vpišemo dva DNS strežnika:
 
-    ![Vpisana DNS zapisa](/img/image-nmtui-DNS.png)
+    ![Vpisana DNS zapisa](../img/image-nmtui-DNS.png)
 
     Preverimo:
     ```bash

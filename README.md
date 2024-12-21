@@ -1,6 +1,7 @@
 # PMR-FRN-SvxLink
 FRN network with SvxLink on PMR
 
+Github - PAGES (lepši izgled navodil): [https://tomaz1.github.io/PMR-FRN-SvxLink/](https://tomaz1.github.io/PMR-FRN-SvxLink/)
 
 # 1.) [Kaj potrebujemo za PMR - FRN prehod in kako izgleda FRN prehod](Navodila/Kaj-je-FRN-in-slike.md)
 

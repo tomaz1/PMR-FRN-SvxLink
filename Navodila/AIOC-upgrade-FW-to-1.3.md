@@ -47,7 +47,7 @@ chmod +x runmeonce.sh
 ```
 Povežeš skrajna kontakta ob USB-C konektorju z žičko, da gre naprava v DFU način in priklopiš USB kabel
 
-![alt text](/img/image-AIOC-DFUnacin.png)
+![alt text](../img/image-AIOC-DFUnacin.png)
 
 ```bash
 #PREBEREM trenutno naložen firmware:
@@ -249,4 +249,4 @@ HYSTERESIS=50
 
 <hr>
 
-#### [Pojdi nazaj](RPI3-glavna-navodila.md)
+#### [Pojdi nazaj](RPi3-glavna-navodila.md)
