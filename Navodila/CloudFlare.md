@@ -84,5 +84,5 @@ TODO: dodati navodilo, kako se prijavimo s certifikatom in kako ga pripravimo.
 ## Težave
 
 - [Ko vse pripravite in odnesete na drugo lokacijo, tunel ne deluje? Deluje vam ping v internet, RPi3 se poveže na FRN omrežje, zakaj ne na CloudFlare?
-](README-CloudFlare-help.md)
+](CloudFlare-help.md)
  

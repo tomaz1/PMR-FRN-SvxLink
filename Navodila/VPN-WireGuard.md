@@ -11,7 +11,7 @@ sudo apt install wireguard
 ### Priprava konfiguracijska datoteke
 
 Primer generiranja ključev na OpnSense, vsebino polja Config skopiramo v /etc/wireguard/wg0.conf:
-![Config](/img/image-WireGuard.png)
+![Config](../img/image-WireGuard.png)
 
 ```
 #sudo vi ali sudo nano /etc/wireguard/wg0.conf
@@ -60,3 +60,6 @@ journalctl -u wg-quick@wg0
 - Namestitev WireGuard klienta na Rpi: https://wireguard.how/client/raspberry-pi-os/
 - Postavitev WireGuard strežnika na OpnSense: https://www.zenarmor.com/docs/network-security-tutorials/how-to-setup-wireguard-on-opnsense
 
+<hr>
+
+#### [Pojdi nazaj](Rpi3-glavna-navodila)

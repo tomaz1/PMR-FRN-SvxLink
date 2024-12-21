@@ -374,7 +374,7 @@ tail -f /var/log/svxlink
 ## 9.) Nastavitev oddaljenega SSH dostopa preko brskalnika (brez odpiranja portov)
 
 Oddaljen SSH dostop je možen na več načinov, navodila za dostop z uporabo:
-  - [storitve CloudFlare Zero Trust](/Navodila/README-CloudFlare.md)
+  - [storitve CloudFlare Zero Trust](/Navodila/CloudFlare.md)
   - [VPN WireGuard](/Navodila/VPN-WireGuard.md)
   - [storitve Raspberry Pi Connect (TODO)](/Navodila/RPi-Connect.md)
   
