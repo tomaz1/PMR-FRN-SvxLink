@@ -56,9 +56,9 @@ journalctl -u wg-quick@wg0
 ```
 
 ## Viri:
-- Namestitev WireGuard klienta: https://upcloud.com/resources/tutorials/get-started-wireguard-vpn
-- Namestitev WireGuard klienta na Rpi: https://wireguard.how/client/raspberry-pi-os/
-- Postavitev WireGuard strežnika na OpnSense: https://www.zenarmor.com/docs/network-security-tutorials/how-to-setup-wireguard-on-opnsense
+- [Namestitev WireGuard klienta](https://upcloud.com/resources/tutorials/get-started-wireguard-vpn)
+- [Namestitev WireGuard klienta na Rpi](https://wireguard.how/client/raspberry-pi-os/)
+- [Postavitev WireGuard strežnika na OpnSense](https://www.zenarmor.com/docs/network-security-tutorials/how-to-setup-wireguard-on-opnsense)
 
 <hr>
 
