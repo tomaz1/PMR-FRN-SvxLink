@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning].
 
 ### Added
 
-- Dodan github-pages in tema: Tactile z dodatkoma: style.scss in _config.yml (z relative-links pluginom)
+- Dodan github-pages in tema: Tactile z dodatkoma: style.scss in _config.yml (z [relative-links](https://github.com/benbalter/jekyll-relative-links) pluginom)
 
 ### Changed
 
