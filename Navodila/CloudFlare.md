@@ -86,4 +86,4 @@ TODO: dodati navodilo, kako se prijavimo s certifikatom in kako ga pripravimo.
 
 <hr>
 
-#### [Pojdi nazaj](../README.md)
+#### [Pojdi nazaj](RPi3-glavna-navodila.md)
