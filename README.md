@@ -32,5 +32,5 @@ Datum: 12/2024
 <br>
 <hr>
 
-##### <sup> * [Zgodovina sprememb navodi](CHANGELOG.md)</sub>
+##### <sup> * [Zgodovina sprememb navodi](CHANGELOG.md)</sup>
 
