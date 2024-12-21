@@ -30,4 +30,4 @@ chmod +x restartFRN.sh
 
 <hr>
 
-#### [Pojdi nazaj](Rpi3-glavna-navodila)
+#### [Pojdi nazaj](Rpi3-glavna-navodila.md)

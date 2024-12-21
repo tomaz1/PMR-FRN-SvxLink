@@ -249,4 +249,4 @@ HYSTERESIS=50
 
 <hr>
 
-#### [Pojdi nazaj](RPI3-glavna-navodila)
+#### [Pojdi nazaj](RPI3-glavna-navodila.md)

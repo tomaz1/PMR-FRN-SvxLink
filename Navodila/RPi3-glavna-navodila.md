@@ -413,4 +413,4 @@ Datum: 12/2024
 
 <hr>
 
-#### [Pojdi nazaj](../README)
+#### [Pojdi nazaj](../README.md)

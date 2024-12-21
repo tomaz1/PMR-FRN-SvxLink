@@ -29,3 +29,5 @@ FRN network with SvxLink on PMR
 Datum: 12/2024 
 
 [@Tomaz1](https://github.com/tomaz1) - priprava navodil.
+#### Zgodovina sprememb navodil: [CHANGELOG](CHANGELOG.md)
+

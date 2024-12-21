@@ -88,4 +88,4 @@ TODO: dodati navodilo, kako se prijavimo s certifikatom in kako ga pripravimo.
 
 <hr>
 
-#### [Pojdi nazaj](../README)
+#### [Pojdi nazaj](../README.md)
