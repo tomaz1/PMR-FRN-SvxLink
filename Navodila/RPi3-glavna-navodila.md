@@ -59,7 +59,7 @@ reboot
 ## 6.) Nastavitev statičnega IP-ja, če je potrebno
 
 ```bash
-nmtui 
+sudo nmtui 
 ```
 
 in sledimo GUI vmesniku.
@@ -67,9 +67,8 @@ in sledimo GUI vmesniku.
 ## 7.) Namestitev svxlink strežnika:
 
 ```bash
-sudo su -
 #apt update
-apt-get install svxlink-server
+sudo apt-get install svxlink-server
 ```
 
 ## 8.) ⚡Nastavitve SvxLink-a:
@@ -112,12 +111,12 @@ aplay -l
 #  Subdevices: 1/1
 #  Subdevice #0: subdevice #0
 
-vi /usr/share/alsa/alsa.conf #ali nano /usr/share/alsa/alsa.conf
+sudo vi /usr/share/alsa/alsa.conf #ali nano /usr/share/alsa/alsa.conf
 #in spremenimo v 2, ker je AIOC zaznana kot "card 2"
 default.ctl.card 2 # iz 0
 default.pcm.card 2 # iz 0
 
-reboot
+sudo reboot
 ```
 
 Preverimo zvočno kartico
@@ -154,11 +153,11 @@ Vidimo, da je /dev/ttyACM0
 
 ```bash
 #naredimo varnostno kopijo
-cp /etc/svxlink/svxlink.conf /etc/svxlink/svxlink.bkp
+sudo cp /etc/svxlink/svxlink.conf /etc/svxlink/svxlink.bkp
 
 #vi ali nano, kar vam je bolj domače:
-#nano /etc/svxlink/svxlink.conf
-vi /etc/svxlink/svxlink.conf
+#sudo nano /etc/svxlink/svxlink.conf
+sudo vi /etc/svxlink/svxlink.conf
 ```
 
 ```bash
@@ -242,10 +241,10 @@ DTMF_DIGIT_PWR=-15
 
 ```bash
 #naredimo varnostno kopijo nastavitev:
-cp /etc/svxlink/svxlink.d/ModuleFrn.conf /etc/svxlink/svxlink.d/ModuleFrn.bkp
+sudo cp /etc/svxlink/svxlink.d/ModuleFrn.conf /etc/svxlink/svxlink.d/ModuleFrn.bkp
 #vi ali nano, kar vam je bolj domače:
-#nano /etc/svxlink/svxlink.d/ModuleFrn.conf
-vi /etc/svxlink/svxlink.d/ModuleFrn.conf
+#sudo nano /etc/svxlink/svxlink.d/ModuleFrn.conf
+sudo vi /etc/svxlink/svxlink.d/ModuleFrn.conf
 
 [ModuleFrn]
 NAME=Frn
@@ -306,8 +305,8 @@ Gre za to, da ob zagonu programa takoj oz. 1 minuto po zagonu SvxLink programa a
 
 ```bash
 #vi ali nano, kar vam je bolj domače:
-#nano /usr/share/svxlink/events.d/SimplexLogic.tcl
-vi /usr/share/svxlink/events.d/SimplexLogic.tcl
+#sudo nano /usr/share/svxlink/events.d/SimplexLogic.tcl
+sudo vi /usr/share/svxlink/events.d/SimplexLogic.tcl
 #urediti začetek (nove spremenljivke)
 
 #in dodamo kodo v
@@ -319,8 +318,8 @@ vi /usr/share/svxlink/events.d/SimplexLogic.tcl
 
 ```bash
 #vi ali nano, kar vam je bolj domače:
-#nano /usr/share/svxlink/events.d/Module.tcl
-vi /usr/share/svxlink/events.d/Module.tcl
+#sudo nano /usr/share/svxlink/events.d/Module.tcl
+sudo vi /usr/share/svxlink/events.d/Module.tcl
 
 #zakomentiramo activating/deactivating modula
 
@@ -360,7 +359,7 @@ sudo -u svxlink svxlink
     #da zapremo / končamo testiranje pritisnemo tipke: CTRL+C
 
 #Ko smo zadovoljni z rezultatom lahko ponovno poženemo SvxLink, da teče kot servis v ozadju
-systemctl start svxlink
+sudo systemctl start svxlink
 
 ```
 
