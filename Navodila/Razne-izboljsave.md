@@ -3,6 +3,7 @@
 ```bash
 ln -s /etc/svxlink/svxlink.conf ~/link-svxlink.conf
 ln -s /etc/svxlink/svxlink.d/ModuleFrn.conf ~/link-ModuleFrn.conf
+ln -s /usr/share/svxlink/events.d/SimplexLogic.tcl ~/link-SimpleLogic.tcl
 ```
 
 ```bash
