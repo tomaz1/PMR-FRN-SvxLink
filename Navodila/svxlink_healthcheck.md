@@ -1,4 +1,6 @@
-## Navodilo kako se ročno namesti svxlink_helthcheck, ki skrbi, da je svxlink vedno pognan, četudi preneha delovati zaradi kateregakoli razloga
+## Navodilo kako se ročno namesti svxlink_helthcheck
+
+### Program skrbi, da je svxlink vedno pognan, četudi preneha delovati zaradi kateregakoli razloga
 
 Avtor: Žiga, dec. 2024.
 
