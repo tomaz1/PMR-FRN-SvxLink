@@ -374,44 +374,15 @@ tail -f /var/log/svxlink
 ```bash
 #Poskus avtomatske namestitve, kar je pripravil Žiga.
 sudo wget https://tomaz1.github.io/PMR-FRN-SvxLink/install/install_svxlink_healthcheck.sh
-sudo +x install_svxlink_healthcheck.sh
+sudo chmod +x install_svxlink_healthcheck.sh
 
 ./install_svxlink_healthcheck.sh
 
-```
-<br>
-<hr>
-Ali ročno:
-<br>
-<br>
-
-```bash
-#nano ali vi, kar vam je bolj domače:
-sudo vi /usr/local/bin/svxlink_healthcheck.sh
-
-```
-[svxlink_healthcheck.sh](../usr/local/bin/svxlink_healthcheck.sh)
-
-```bash
-sudo chmod +x /usr/local/bin/svxlink_healthcheck.sh
-```
-
-```bash
-#nano ali vi, kar vam je bolj domače:
-sudo vi /etc/systemd/system/svxlink_healthcheck.service
-
-```
-[svxlink_healthcheck.service](../etc/systemd/system/svxlink_healthcheck.service)
-
-```bash
-sudo systemctl daemon-reload
-sudo systemctl enable svxlink_healthcheck.service
-sudo systemctl start svxlink_healthcheck.service
-
-```
-Po potrebi preverimo loge
-```bash
-sudo tail -f /var/log/svxlink_healthcheck.log
+#preverimo delovanje
+sudo systemctl stop svxlink
+#počakamo in vidimo, če se bo svxlink sam pognal?
+#lahko spremljamo log:
+tail -f /var/log/svxlink_healthcheck.log
 ```
 
 V kolikor bi želeli, da svxlink namenoma res ostane izklopljen:
@@ -419,6 +390,9 @@ V kolikor bi želeli, da svxlink namenoma res ostane izklopljen:
 sudo systemctl stop svxlink_healthcheck
 sudo systemctl stop svxlink
 ```
+
+Ali [namestite ročno](svxlink_healthcheck.md) (po Žigovih navodilih).
+
 
 
 ## 10.) Nastavitev oddaljenega SSH dostopa preko brskalnika (brez odpiranja portov)

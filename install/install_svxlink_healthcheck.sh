@@ -1,5 +1,5 @@
 #!/bin/bash
-#23. 12. 24 Tomaz, Lj-Brdo, ideja: da avtomatiziramo namestitev servica za helthcheck.sh
+#23. 12. 24 Tomaz, ideja: da avtomatiziramo namestitev servica za helthcheck.sh
 
 sudo wget https://tomaz1.github.io/PMR-FRN-SvxLink/usr/local/bin/svxlink_healthcheck.sh -P /usr/local/bin/
 sudo chmod +x /usr/local/bin/svxlink_healthcheck.sh
