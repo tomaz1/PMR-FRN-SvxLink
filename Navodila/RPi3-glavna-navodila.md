@@ -30,7 +30,7 @@ raspi-config
 <sup>* "sudo su -" ukaz je zato, da ni potrebno pred ukaze vpisovati sudo. Tako postanemo root (uporabnik z največ pravicami)</sup>
 <br>
 
-## 5.) ⚒️ Nastavitve raspi-config:
+### 5.) ⚒️ Nastavitve raspi-config:
 
 #### "5 Localisation Options" → L1 Locale
 
@@ -56,7 +56,7 @@ Obstaja tudi ukaz: "apt full-upgrade"
 reboot
 ```
 
-## 6.) Nastavitev statičnega IP-ja, če je potrebno
+### 6.) Nastavitev statičnega IP-ja, če je potrebno
 
 ```bash
 sudo nmtui 
@@ -64,14 +64,14 @@ sudo nmtui
 
 in sledimo GUI vmesniku.
 
-## 7.) Namestitev svxlink strežnika:
+### 7.) Namestitev svxlink strežnika:
 
 ```bash
 #apt update
 sudo apt-get install svxlink-server
 ```
 
-## 8.) ⚡Nastavitve SvxLink-a:
+### 8.) ⚡Nastavitve SvxLink-a:
 
 Poiščemo oz. preverimo ali je AIOC kartica zaznana
 
@@ -369,7 +369,7 @@ sudo systemctl start svxlink
 #spremljanje loga v živo:
 tail -f /var/log/svxlink
 ```
-## 9.) Skripta za healthcheck (Avtor: Žiga \[12/24\], hvala)
+### 9.) Skripta za healthcheck (Avtor: Žiga \[12/24\], hvala)
 
 ```bash
 #Poskus avtomatske namestitve, kar je pripravil Žiga.
@@ -395,7 +395,7 @@ Ali [namestite ročno](svxlink_healthcheck.md) (po Žigovih navodilih).
 
 
 
-## 10.) Nastavitev oddaljenega SSH dostopa preko brskalnika (brez odpiranja portov)
+### 10.) Nastavitev oddaljenega SSH dostopa preko brskalnika (brez odpiranja portov)
 
 Oddaljen SSH dostop je možen na več načinov, navodila za dostop z uporabo:
   - [storitve CloudFlare Zero Trust](CloudFlare.md)
@@ -406,16 +406,16 @@ Oddaljen SSH dostop je možen na več načinov, navodila za dostop z uporabo:
 <br>
 <hr>
 
-## 11.) Če imate težave z VOX sprejemanjem?
+### 11.) Če imate težave z VOX sprejemanjem?
 
 Če vas radijska postaja sprejema in pošilja v FRN omrežje, vendar se pogosto dogaja, da če ste tiho VOX ne zazna govora in prekine pošiljanje v FRN omrežje? 
 
 [Nadgradnja AIOC na firmware 1.3 in uporaba proženja preko HIDRAW namesto preko serijskega porta (Navodilo, povezava na navodila).](AIOC-upgrade-FW-to-1.3.md)
 
-## 11.) 🔌/🔋 Napajanje
+### 12.) 🔌/🔋 Napajanje
 (TODO)
 
-## Pomoč / Viri
+### Pomoč / Viri
 
 - #### [Navodila za namesitev FRN prehoda na sistemu Java FRN](https://slo-tech.com/forum/t834577/p8355681?fbclid=IwZXh0bgNhZW0CMTAAAR3apADiQJbOcgX9zCMiAXMCZ_xrUPe8YrlSoydmHYD4oyywWxe3iKNXdxw_aem_7KIs547M3SwynhY7aNpZ_Q#p8355681) (Slo-Tech forum)
 
@@ -424,7 +424,7 @@ Oddaljen SSH dostop je možen na več načinov, navodila za dostop z uporabo:
 - [AIOC adapter](https://github.com/skuep/AIOC)
 
 
-## Zahvale
+##S# Zahvale
 @Žiga<br>
 @Tilen<br>
 @Franc (Radovljica)<br>
