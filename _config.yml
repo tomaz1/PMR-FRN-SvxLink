@@ -3,5 +3,5 @@ plugins:
   - jekyll-remote-theme
   #- jekyll-relative-links
 
-title: [PMR-FRN-SvxLink]
-description: [FRN omrežje s SvxLink na PMR]
+title: PMR-FRN-SvxLink
+description: FRN omrežje s SvxLink na PMR

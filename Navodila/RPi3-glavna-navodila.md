@@ -369,10 +369,10 @@ sudo systemctl start svxlink
 #spremljanje loga v živo:
 tail -f /var/log/svxlink
 ```
-### 9.) Skripta za healthcheck (Avtor: Žiga \[12/24\], hvala)
+### 9.) Skripta za healthcheck (Avtor: Žiga, 12/24, hvala)
 
 ```bash
-#Poskus avtomatske namestitve, kar je pripravil Žiga.
+#Avtomatska namestitev, kar je pripravil Žiga.
 sudo wget https://tomaz1.github.io/PMR-FRN-SvxLink/install/install_svxlink_healthcheck.sh
 sudo chmod +x install_svxlink_healthcheck.sh
 
