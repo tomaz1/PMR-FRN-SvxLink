@@ -369,8 +369,59 @@ sudo systemctl start svxlink
 #spremljanje loga v živo:
 tail -f /var/log/svxlink
 ```
+## 9.) Skripta za healthcheck (Avtor: Žiga \[12/24\], hvala)
 
-## 9.) Nastavitev oddaljenega SSH dostopa preko brskalnika (brez odpiranja portov)
+```bash
+#Poskus avtomatske namestitve, kar je pripravil Žiga.
+sudo wget https://tomaz1.github.io/PMR-FRN-SvxLink/install/install_svxlink_healthcheck.sh
+sudo +x install_svxlink_healthcheck.sh
+
+./install_svxlink_healthcheck.sh
+
+```
+<br>
+<hr>
+Ali ročno:
+<br>
+<br>
+
+```bash
+#nano ali vi, kar vam je bolj domače:
+sudo vi /usr/local/bin/svxlink_healthcheck.sh
+
+```
+[svxlink_healthcheck.sh](../usr/local/bin/svxlink_healthcheck.sh)
+
+```bash
+sudo chmod +x /usr/local/bin/svxlink_healthcheck.sh
+```
+
+```bash
+#nano ali vi, kar vam je bolj domače:
+sudo vi /etc/systemd/system/svxlink_healthcheck.service
+
+```
+[svxlink_healthcheck.service](../etc/systemd/system/svxlink_healthcheck.service)
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable svxlink_healthcheck.service
+sudo systemctl start svxlink_healthcheck.service
+
+```
+Po potrebi preverimo loge
+```bash
+sudo tail -f /var/log/svxlink_healthcheck.log
+```
+
+V kolikor bi želeli, da svxlink namenoma res ostane izklopljen:
+```bash
+sudo systemctl stop svxlink_healthcheck
+sudo systemctl stop svxlink
+```
+
+
+## 10.) Nastavitev oddaljenega SSH dostopa preko brskalnika (brez odpiranja portov)
 
 Oddaljen SSH dostop je možen na več načinov, navodila za dostop z uporabo:
   - [storitve CloudFlare Zero Trust](CloudFlare.md)
@@ -381,7 +432,7 @@ Oddaljen SSH dostop je možen na več načinov, navodila za dostop z uporabo:
 <br>
 <hr>
 
-## 10.) Če imate težave z VOX sprejemanjem?
+## 11.) Če imate težave z VOX sprejemanjem?
 
 Če vas radijska postaja sprejema in pošilja v FRN omrežje, vendar se pogosto dogaja, da če ste tiho VOX ne zazna govora in prekine pošiljanje v FRN omrežje? 
 
