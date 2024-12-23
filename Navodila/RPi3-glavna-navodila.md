@@ -146,7 +146,7 @@ dmesg | grep tty
 
 Vidimo, da je /dev/ttyACM0
 
-### Nastavitve svxlink.conf (**NI ŠE KONČNA VERZIJA; v delu**):
+#### Nastavitve svxlink.conf (**NI ŠE KONČNA VERZIJA; v delu**):
 
 [Žigova svxlink.conf datoteka !](../etc/svxlink/svxlink.conf) - za Baofeng 888
 
@@ -237,7 +237,7 @@ DTMF_DIGIT_PWR=-15
 #MASTER_GAIN=9
 ```
 
-### Uredimo ModuleFrn.conf (**NI ŠE KONČNA VERZIJA; v delu**):
+#### Uredimo ModuleFrn.conf (**NI ŠE KONČNA VERZIJA; v delu**):
 
 ```bash
 #naredimo varnostno kopijo nastavitev:
@@ -279,7 +279,7 @@ NET=Test
 #DISABLE_RF=1
 ```
 
-### Namestitev zvočnih datotek za SvxLink:
+#### Namestitev zvočnih datotek za SvxLink:
 
 Pri trenutni postavitvi piše, da gre za svxlink v1.7.0 in zgleda je to verzija 19.09, [vir](https://github.com/sm0svx/svxlink/blob/maint/src/doc/README-19.09.adoc)<br>
 Kako se namesti datoteke, [vir](https://it9fdp.blogspot.com/2015/09/installare-svxlink.html):
@@ -296,7 +296,7 @@ rm -r ./en_US-heather-16k/
 ```
 
 
-### Uredimo logiko, da se avtomatsko požene FRN modul:
+#### Uredimo logiko, da se avtomatsko požene FRN modul:
 Gre za spremenjeno Tilnovo SimplexLogic.tcl datoteko!
 
 [Datoteka SimplexLogic.tcl](../usr/share/svxlink/events.d/SimplexLogic.tcl)
@@ -314,7 +314,7 @@ sudo vi /usr/share/svxlink/events.d/SimplexLogic.tcl
 #    ...
 ```
 
-### Da ob zagonu FRN modula tega ne govori v eter/internet:
+#### Da ob zagonu FRN modula tega ne govori v eter/internet:
 
 ```bash
 #vi ali nano, kar vam je bolj domače:
@@ -341,7 +341,7 @@ proc deactivating_module {module_name} {
 }
 ```
 
-### Nastavimo, da se svxlink vedno zažene bo zagonu:
+#### Nastavimo, da se svxlink vedno zažene bo zagonu:
 
 ```bash
 #test delovanja
@@ -363,7 +363,7 @@ sudo systemctl start svxlink
 
 ```
 
-### Logi SvxLink:
+#### Logi SvxLink:
 
 ```bash
 #spremljanje loga v živo:
