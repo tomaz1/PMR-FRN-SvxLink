@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning].
 
 - Ideja: da bi imeli več wget ukazov, in bi lahko enostavneje namestili zadevo, tudi samo navodilo bi bilo tako lahko krajše :)
 
+### Added
+
+- Dodana ikonica favicon.ico in _includes\head-custom.html, da je na vseh github pages in vseh podstraneh tudi vključena .ico :)
+- Dodanova Žigova skripta svxlink-healthcheck (in pripravljena instalacijska procedura, da je namestitev lažja), ki preverja ali je service delujoč in če ni, da se ponovno zažene. To pomeni, da če želimo res ustaviti svxlink je postopek sledeč:
+  -     sudo systemctl stop svxlink_healthcheck
+  -     sudo systemctl stop svxlink
+
 ## [0.0.4] - 2024-12-21
 
 ### Added

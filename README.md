@@ -1,17 +1,17 @@
 
 Novo: GitHub Pages (lepši izgled navodil): [https://tomaz1.github.io/PMR-FRN-SvxLink/](https://tomaz1.github.io/PMR-FRN-SvxLink/)
 
-# 1.) [Kaj potrebujemo za PMR - FRN prehod in kako izgleda FRN prehod](Navodila/Kaj-je-FRN-in-slike.md)
+## 1.) [Kaj potrebujemo za PMR - FRN prehod in kako izgleda FRN prehod](Navodila/Kaj-je-FRN-in-slike.md)
 
-# 2.) [Navodila za postavitev PMR - FRN prehoda](Navodila/RPi3-glavna-navodila.md)
+## 2.) [Navodila za postavitev PMR - FRN prehoda](Navodila/RPi3-glavna-navodila.md)
 
-# Uporabne povezave
+### Uporabne povezave
 
-### Discord skupina "PMR Slovenija":
+#### Discord skupina "PMR Slovenija":
 
 [![Join discord PMR Slovenia](./img/image-pmr-discord.png)](https://discord.gg/uJwU4dH3hF)
 
-### PMR / FRN Povezave:
+#### PMR / FRN Povezave:
 
   - [Slo-Tech forum](https://slo-tech.com/forum/t796344/0) (Prvi Redni PMR446 SKED V Sloveniji)
 
