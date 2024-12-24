@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning].
 - Dodanova Žigova skripta svxlink-healthcheck (in pripravljena instalacijska procedura, da je namestitev lažja), ki preverja ali je service delujoč in če ni, da se ponovno zažene. To pomeni, da če želimo res ustaviti svxlink je postopek sledeč:
   -     sudo systemctl stop svxlink_healthcheck
   -     sudo systemctl stop svxlink
-- Dodana ikonica favicon.ico in _includes\head-custom.html, da je na vseh github pages in vseh podstraneh tudi vključena .ico :). Če bodo težave bom poskusil nastaviti: \<link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico"\>
+- Dodana ikonica favicon.ico in _includes\head-custom.html, da je na vseh github pages in vseh podstraneh tudi vključena .ico :). Ico dodan tako: \<link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico"\>
 
 ## [0.0.4] - 2024-12-21
 
