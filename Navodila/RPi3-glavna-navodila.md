@@ -1,6 +1,8 @@
 
 # 🛠️ Koraki za namestitev
 
+Vir: [https://tomaz1.github.io/PMR-FRN-SvxLink/](https://tomaz1.github.io/PMR-FRN-SvxLink/)
+
 ### 1.) Poženemo Raspberry Pi Imager
 
 [https://www.raspberrypi.com/software/](https://www.raspberrypi.com/software/)
