@@ -423,7 +423,7 @@ Oddaljen SSH dostop je možen na več načinov, navodila za dostop z uporabo:
 - [AIOC adapter](https://github.com/skuep/AIOC)
 
 
-##S# Zahvale
+### Zahvale
 @Žiga<br>
 @Tilen<br>
 @Franc (Radovljica)<br>
