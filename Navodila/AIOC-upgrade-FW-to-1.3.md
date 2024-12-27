@@ -223,7 +223,9 @@ aioc = hid.Device(vid=0x0d8c, pid=0x000c)
 
  - Takoj po Tx (oddajanju) se sproži za cca 500ms Rx. Pri VOX proženju je možno nastaviti razne delaye in ni težav, pri HIDRAW pa tega ni.  
  Spodaj je razložena (začasna) rešitev, a bolje kot nič je, da imam dve Rx sekciji in "Voter":
-
+ 
+ **POPRAVEK 27. 12. 24**: ko sem nastavil v Rx1 na SQL_HANGTIME=1500, ni bilo več zgornjih težav in Voter ni bil potreben. Bom zaenkrat vseeno pustil v novodilih, če bi slučajno kdo to potreoval zaradi kakršnegakoli razloga.
+ 
 <sup>([Za Rx1 poglej zgoraj](#Rx1))</sup>
 
 ```bash
