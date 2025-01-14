@@ -29,6 +29,7 @@ chmod +x restartFRN.sh
 ./restartFRN.sh
 ```
 
+
 <hr>
 
 #### [Pojdi nazaj](Rpi3-glavna-navodila.md)
