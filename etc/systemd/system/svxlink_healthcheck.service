@@ -1,0 +1,11 @@
+[Unit]
+Description=Healthcheck za storitev svxlink
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/svxlink_healthcheck.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
