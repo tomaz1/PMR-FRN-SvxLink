@@ -252,7 +252,7 @@ sudo vi /etc/svxlink/svxlink.d/ModuleFrn.conf
 NAME=Frn
 PLUGIN_NAME=Frn
 ID=2
-TIMEOUT=300
+#TIMEOUT=300
 
 # Details http://freeradionetwork.eu/frnprotocol.htm
 
@@ -300,6 +300,8 @@ rm -r ./en_US-heather-16k/
 
 #### Uredimo logiko, da se avtomatsko požene FRN modul:
 Gre za spremenjeno Tilnovo SimplexLogic.tcl datoteko!
+
+TODO zame, 15. 1. 25, https://github.com/sm0svx/svxlink/wiki/Events-Handling-System Naj se ne bi popravljalo direktno .tcl datotek, vendar dodalo mapo local in tja skopiralo datoteke .tcl in jih tam urejalo!
 
 [Datoteka SimplexLogic.tcl](../usr/share/svxlink/events.d/SimplexLogic.tcl)
 
