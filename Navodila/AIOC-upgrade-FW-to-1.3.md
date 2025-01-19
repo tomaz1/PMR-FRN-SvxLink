@@ -249,7 +249,7 @@ HYSTERESIS=50
 ## Viri
 
 - [AIOC - github](https://github.com/skuep/AIOC)
-- https://g1lro.uk/?p=676
+- [https://g1lro.uk/?p=676](https://g1lro.uk/?p=676)
 - [Video how to upgrade](https://www.youtube.com/watch?v=7LB6D2FLGZk&ab_channel=HamRadioDX)
 - [AIOC and SvxLink preko HIDRAW](https://github.com/skuep/AIOC/issues/86).
 
