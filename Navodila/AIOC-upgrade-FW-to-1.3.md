@@ -216,6 +216,8 @@ python aioc-1.3.0.py
 
 Če je/bo potreben revert iz CM108 na original VID/PID (1209:7388 Generic All-In-One-Cable), ali upgrade, moramo uporabiti trenutni VID in PID za povezavo. [Ideja od tu](../AIOC/www.g1lro.uk-v1.3-RC.1/aioc-revert.py).
 
+Datoteka **[aioc-1.3.0-revert_defaultVIDPID.py](../AIOC/aioc-1.3.0-revert_defaultVIDPID.py)**, da nastavimo VID in PID na original VID/PID:
+
 ```bash
 wget https://tomaz1.github.io/PMR-FRN-SvxLink/AIOC/aioc-1.3.0-revert_defaultVIDPID.py
 python aioc-1.3.0-revert_defaultVIDPID.py
