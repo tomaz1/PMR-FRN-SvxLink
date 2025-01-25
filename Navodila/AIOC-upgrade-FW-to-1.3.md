@@ -8,7 +8,7 @@
 
 
 ## 🔧 Koraki za nadgradnjo AIOC modula na v 1.3 RC1*
-<sup>\* [Navodilo za posodobitev na firmware verzije 1.3 RC2](#AIOC_1.3RC2)</sup>
+<sup>\* [Navodilo za posodobitev na firmware uradno verzijo 1.3 (RC1 je starejša verzija, kot uradna verzija 1.3.0)](#AIOC_1.3)</sup>
 
 ### Potrebujete (to ali podobno):
  - RPi 3
@@ -195,28 +195,49 @@ DTMF_DIGIT_PWR=-15
 ```
 <br>
 
-<a name="AIOC_1.3RC2"></a>
-## Nadgradnja AIOC firmware na 1.3 RC2
+<a name="AIOC_1.3"></a>
+## Nadgradnja AIOC firmware na 1.3
 
 Ker imate nameščena orodja za nadgradnjo (zgornja navodila)
 in že znate dati AIOC v DFU načinu, potem pa:
 
 ```bash
-wget https://github.com/skuep/AIOC/releases/download/v1.3.0-rc.2/aioc-fw-1.3.0-rc.2.bin
+wget https://github.com/skuep/AIOC/releases/download/v1.3.0/aioc-fw-1.3.0.bin
 
-dfu-util -a 0 -s 0x08000000 -D aioc-fw-1.3.0-rc.1.bin
+dfu-util -a 0 -s 0x08000000 -D aioc-fw-1.3.0.bin
 
 ```
-Datoteka **[aioc-1.3.0-RC.2.py](../AIOC/aioc-1.3.0-RC.2.py)**, da nastavimo VID in PID na CM108:
+Datoteka **[aioc-1.3.0.py](../AIOC/aioc-1.3.0.py)**, da nastavimo VID in PID na CM108:
 
 ```bash
-wget https://tomaz1.github.io/PMR-FRN-SvxLink/AIOC/aioc-1.3.0-RC.2.py
-python aioc-1.3.0-RC.2.py
+wget https://tomaz1.github.io/PMR-FRN-SvxLink/AIOC/aioc-1.3.0.py
+python aioc-1.3.0.py
 ```
 
-Če bo potreben revert iz RC.2 na original VID in PID, ali upgrade, moramo uporabiti ustrezen VID in PID, kot ga imamo nastavljenega na napravi, kot je [razloženo tu](../AIOC/www.g1lro.uk-v1.3-RC.1/aioc-revert.py).
+Če je/bo potreben revert iz CM108 na original VID/PID (1209:7388 Generic All-In-One-Cable), ali upgrade, moramo uporabiti trenutni VID in PID za povezavo. [Ideja od tu](../AIOC/www.g1lro.uk-v1.3-RC.1/aioc-revert.py).
+
 ```bash
-aioc = hid.Device(vid=0x0d8c, pid=0x000c)
+wget https://tomaz1.github.io/PMR-FRN-SvxLink/AIOC/aioc-1.3.0-revert_defaultVIDPID.py
+python aioc-1.3.0-revert_defaultVIDPID.py
+
+#Pričakovan odziv:
+#Manufacturer: AIOC
+#Product: All-In-One-Cable
+#Serial No: 56a33314
+#Magic: b'AIOC'
+#Current PTT1 Source: PTTSource.SERIALDTRNRTS|CM108GPIO3
+#Current PTT2 Source: PTTSource.CM108GPIO4
+#Current CM108 Button 1 (VolUP) Source: CM108ButtonSource.IN2
+#Current CM108 Button 2 (VolDN) Source: CM108ButtonSource.VCOS
+#Current CM108 Button 3 (PlbMute) Source: CM108ButtonSource.NONE
+#Current CM108 Button 4 (RecMute) Source: CM108ButtonSource.NONE
+#Now USBID: 73881209
+#Storing...
+
+#USB vn in nazaj not in dobimo nazaj default VID in PID:
+lsusb
+# Bus 001 Device 005: ID 1209:7388 Generic All-In-One-Cable
+
 ```
 
 ## Težave
