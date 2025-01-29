@@ -415,7 +415,7 @@ Oddaljen SSH dostop je možen na več načinov, navodila za dostop z uporabo:
 
 ### 12.) Kaj če ima PMR postaja samo eno bananco za vhod in drugače obravnava mikrofonski vhod?
 
-Ali lahko še vedno uporabimo AIOC adapter? Navodila so še v TESTNI fazi: [Priprava vezja in vezava](AIOC-PMR-extra.md)
+Ali lahko še vedno uporabimo AIOC adapter? Prva verzija navodil:  [Priprava vezja in vezava](AIOC-PMR-extra.md)
 
 ### 13.) 🔌/🔋 Napajanje
 (TODO)
