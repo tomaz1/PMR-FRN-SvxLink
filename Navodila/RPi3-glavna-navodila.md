@@ -413,7 +413,11 @@ Oddaljen SSH dostop je možen na več načinov, navodila za dostop z uporabo:
 
 [Nadgradnja AIOC na firmware 1.3 in uporaba proženja preko HIDRAW namesto preko serijskega porta (Navodilo, povezava na navodila).](AIOC-upgrade-FW-to-1.3.md)
 
-### 12.) 🔌/🔋 Napajanje
+### 12.) Kaj če ima PMR postaja samo eno bananco za vhod in drugače obravnava mikrofonski vhod?
+
+Ali lahko še vedno uporabimo AIOC adapter? Navodila so še v TESTNI fazi: [Priprava vezja in vezava](AIOC-PMR-extra.md)
+
+### 13.) 🔌/🔋 Napajanje
 (TODO)
 
 ### Pomoč / Viri
