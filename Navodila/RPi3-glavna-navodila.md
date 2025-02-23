@@ -357,7 +357,10 @@ Shema ni 100% pravilna, ampak za začetek nekaj je:
 ### 14.) 🔌/🔋 Napajanje
 (TODO)
 
+<hr>
+
 ### Pomoč / Viri
+
 - **[PMR Slovenija - spletna stran https://pmr.si](https://pmr.si)**
 - [Navodila za namesitev FRN prehoda na sistemu Java FRN](https://slo-tech.com/forum/t834577/p8355681?fbclid=IwZXh0bgNhZW0CMTAAAR3apADiQJbOcgX9zCMiAXMCZ_xrUPe8YrlSoydmHYD4oyywWxe3iKNXdxw_aem_7KIs547M3SwynhY7aNpZ_Q#p8355681) (Slo-Tech forum)
 - [Github SvxLink](https://github.com/sm0svx/svxlink)
@@ -372,7 +375,6 @@ Shema ni 100% pravilna, ampak za začetek nekaj je:
 @Evgen (spletna stran <a href="https://pmr.si">pmr.si</a>)<br>
 ... **TODO - Dodati še vse ostale**
 
-<hr>
 Datum: 02/2025 
 
 [@Tomaz1](https://github.com/tomaz1) - priprava navodil.

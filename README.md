@@ -5,22 +5,19 @@ Novo: GitHub Pages (lepši izgled navodil): [https://tomaz1.github.io/PMR-FRN-Sv
 
 ## 2.) [Navodila za postavitev PMR - FRN prehoda](Navodila/RPi3-glavna-navodila.md)
 
-### Uporabne povezave
+### Uporabne povezave:
 
-#### PMR Slovenija - https://pmr.si
-
-- **[PMR Slovenija - spletna stran https://pmr.si](https://pmr.si)**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[PMR Slovenija - spletna stran https://pmr.si](https://pmr.si)**
 
 #### Discord skupina "PMR Slovenija":
 
-[![Join discord PMR Slovenia](./img/image-pmr-discord.png)](https://discord.gg/uJwU4dH3hF)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Join discord PMR Slovenia](./img/image-pmr-discord.png)](https://discord.gg/uJwU4dH3hF)
 
 #### PMR / FRN Povezave:
 
   - [Slo-Tech forum](https://slo-tech.com/forum/t796344/0) (Prvi Redni PMR446 SKED V Sloveniji)
 
   - [![Facebook](./img/image-facebook.png)](https://www.facebook.com/groups/355467710574815/)
-
 
 ## Zahvale
 @Žiga<br>
