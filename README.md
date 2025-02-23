@@ -7,6 +7,10 @@ Novo: GitHub Pages (lepši izgled navodil): [https://tomaz1.github.io/PMR-FRN-Sv
 
 ### Uporabne povezave
 
+#### PMR Slovenija - https://pmr.si
+
+- **[PMR Slovenija - spletna stran https://pmr.si](https://pmr.si)**
+
 #### Discord skupina "PMR Slovenija":
 
 [![Join discord PMR Slovenia](./img/image-pmr-discord.png)](https://discord.gg/uJwU4dH3hF)
@@ -22,6 +26,7 @@ Novo: GitHub Pages (lepši izgled navodil): [https://tomaz1.github.io/PMR-FRN-Sv
 @Žiga<br>
 @Tilen<br>
 @Franc (Radovljica)<br>
+@Evgen (spletna stran <a href="https://pmr.si">pmr.si</a>)<br>
 ... **TODO - Dodati še vse ostale**
 
 <hr>
