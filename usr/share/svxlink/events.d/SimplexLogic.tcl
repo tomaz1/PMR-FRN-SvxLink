@@ -5,11 +5,6 @@
 ###############################################################################
 
 #
-# A global variable used to store timer and FRN restart timer.
-# Waiting max 1 min to start FRN or go from other modules after one minute back to FRN
-variable frn_restart_time_min 1;
-
-#
 # This is the namespace in which all functions below will exist. The name
 # must match the corresponding section "[SimplexLogic]" in the configuration
 # file. The name may be changed but it must be changed in both places.
@@ -23,10 +18,16 @@ if {$logic_name != [namespace tail [namespace current]]} {
   return;
 }
 
-
-# A variable used to time for restart timer for FRN module [min].
 #
-variable frn_timer_min 0;
+# A variable used to time for restart timer for FRN module [sec].
+#
+variable frn_timer_sec 0;
+
+
+#
+# A variable used to time for WDS watchdog signal [min].
+#
+variable wds_timer_min 0;
 
 #
 # User variables
@@ -44,12 +45,12 @@ variable frn_timer_min 0;
 #
 proc startup {} {
   global logic_name;
-  global frn_restart_time_min;
-  variable frn_timer_min;
-  #global wds_time_min;
-  #global frn_time_sec;
-  #variable frn_timer_sec;
-  #variable wds_timer_min;
+  global wds_time_min;
+  global frn_time_sec;
+  global auto_mode_triggered
+  set auto_mode_triggered 0
+  variable frn_timer_sec;
+  variable wds_timer_min;
   #variable gpio_state;
   #variable gpio_str_bsy;
   #set res(0) 0;
@@ -65,8 +66,8 @@ proc startup {} {
   Logic::startup;
 
   # run FRN module
-  #set wds_timer_min $wds_time_min;
-  set frn_timer_min $frn_restart_time_min;
+  set wds_timer_min $wds_time_min;
+  set frn_timer_sec $frn_time_sec;
 
   # initilize led's
 #  set res(0) [catch {
@@ -235,50 +236,63 @@ proc link_already_active {name} {
 #
 # Executed once every whole minute
 #
+# 
 proc every_minute {} {
-  global active_module;
-  global frn_restart_time_min;
-  variable frn_timer_min;
+  global wds_time_min
+  global active_module
+  global auto_mode_triggered
+  variable wds_timer_min
 
-  # Če ni aktivnega modula
-  if {$active_module == ""} {
-    if {$frn_timer_min > 0} {
-      set frn_timer_min [expr $frn_timer_min - 1];
-      if {$frn_timer_min == 0} {
-        puts "SimplexLogic: FRN restart timer elapsed. No active module, activating FRN module.";
-        set frn_timer_min $frn_restart_time_min;
-        injectDtmf "2#";  # Aktiviraj FRN modul
-      }
-    }
-  } else {
-    # Če je aktivni modul različen od "Frn"
-    if {$active_module != "Frn"} {
-      if {$frn_timer_min > 0} {
-        set frn_timer_min [expr $frn_timer_min - 1];
-        if {$frn_timer_min == 0} {
-          puts "SimplexLogic: FRN restart timer elapsed. Exiting active module and activating FRN module.";
-          
-          injectDtmf "#";    # Zapusti trenutni modul
-          injectDtmf "2#";   # Aktiviraj FRN modul
-
-          set frn_timer_min $frn_restart_time_min;
-        }
-      }
-    } else {
-      # Če je trenutni modul "Frn", samo ponastavi časovnik
-      set frn_timer_min $frn_restart_time_min;
+  # Preverjanje WDS signala
+  if {$wds_timer_min > 0} {
+    set wds_timer_min [expr $wds_timer_min - 1]
+    if {$wds_timer_min == 0} {
+      puts "SimplexLogic: WDS signal"
+      set wds_timer_min $wds_time_min
     }
   }
 
-  #puts "SimplexLogic: Si v modulu $active_module";
-  Logic::every_minute;
+  # Povezava pade in aktivni modul je FRN
+  if {[catch {exec ping -c 1 8.8.8.8} result] && $active_module == "Frn"} {
+    puts "SimplexLogic: Internet connection lost. Switching to the PARROT mode."
+    set auto_mode_triggered 1
+    injectDtmf "#1#"
+  } elseif {![catch {exec ping -c 1 8.8.8.8} result] && $active_module == "Parrot" && $auto_mode_triggered} {
+    puts "SimplexLogic: Internet connection restored. Returning back to the FRN module."
+    set auto_mode_triggered 0
+    injectDtmf "#2#"
+  }
+
+  Logic::every_minute
 }
 
 #
 # Executed once every second
 #
 proc every_second {} {
-  Logic::every_second;
+  global active_module
+  global frn_time_sec
+  global auto_mode_triggered
+  variable frn_timer_sec
+
+  if {$active_module == ""} {
+    if {$frn_timer_sec > 0} {
+      set frn_timer_sec [expr $frn_timer_sec - 1]
+      if {$frn_timer_sec == 0 && !$auto_mode_triggered && ![catch {exec ping -c 1 8.8.8.8} result]} {
+        puts "SimplexLogic: FRN restart timer elapsed. No active module, activating FRN module."
+        set frn_timer_sec $frn_time_sec
+        injectDtmf "2#"
+      } elseif {$frn_timer_sec == 0 && $auto_mode_triggered} {
+        puts "SimplexLogic: FRN restart timer elapsed. No active module but no internet connection, returning to the PARROT mode."
+        set frn_timer_sec $frn_time_sec
+        injectDtmf "1#"
+      }
+    }
+  } else {
+    set frn_timer_sec $frn_time_sec
+  }
+
+  Logic::every_second
 }
 
 #
@@ -336,6 +350,10 @@ proc checkPeriodicIdentify {} {
 # return 0 to make SvxLink continue processing as normal.
 #
 proc dtmf_digit_received {digit duration} {
+  global frn_time_sec;
+  variable frn_timer_sec;
+  
+  set frn_timer_sec $frn_time_sec;
   return [Logic::dtmf_digit_received $digit $duration];
 }
 
@@ -348,6 +366,10 @@ proc dtmf_digit_received {digit duration} {
 # return 0 to make SvxLink continue processing as normal.
 #
 proc dtmf_cmd_received {cmd} {
+  global frn_time_sec;
+  variable frn_timer_sec;
+  
+  set frn_timer_sec $frn_time_sec;
   return [Logic::dtmf_cmd_received $cmd];
 }
 
@@ -456,6 +478,7 @@ proc remote_received_tg_updated {logic tg} {
   Logic::remote_received_tg_updated "$logic" "$tg"
 }
 
+
 # end of namespace
 }
 
@@ -463,4 +486,3 @@ proc remote_received_tg_updated {logic tg} {
 #
 # This file has not been truncated
 #
-

@@ -148,7 +148,7 @@ dmesg | grep tty
 
 Vidimo, da je /dev/ttyACM0
 
-#### Nastavitve svxlink.conf (**NI ŠE KONČNA VERZIJA; v delu**):
+#### Nastavitve svxlink.conf (**NI ŠE KONČNA VERZIJA; v delu**, tu Žigova datoteka 21. 2. 2025):
 
 [Žigova svxlink.conf datoteka !](../etc/svxlink/svxlink.conf)
 
@@ -157,97 +157,29 @@ Vidimo, da je /dev/ttyACM0
 #naredimo varnostno kopijo
 sudo cp /etc/svxlink/svxlink.conf /etc/svxlink/svxlink.bkp
 
-#vi ali nano, kar vam je bolj domače:
+#pridobimo Žigovo datoteko:
+sudo wget https://tomaz1.github.io/PMR-FRN-SvxLink/etc/svxlink/svxlink.conf -O /etc/svxlink/svxlink.conf
+
+#vi ali nano, kar vam je bolj domače, da si pogledamo vsebino in po potrebi popravimo:
 #sudo nano /etc/svxlink/svxlink.conf
 sudo vi /etc/svxlink/svxlink.conf
 ```
 
-```bash
-###############################################################################
-#                                                                             #
-#                Configuration file for the SvxLink server                    #
-#                                                                             #
-###############################################################################
 
-[GLOBAL]
-#MODULE_PATH=/usr/lib/arm-linux-gnueabihf/svxlink
-LOGICS=SimplexLogic
-CFG_DIR=svxlink.d
-TIMESTAMP_FORMAT="%c"
-CARD_SAMPLE_RATE=48000
-#mono:
-CARD_CHANNELS=1
-#LOCATION_INFO=LocationInfo
-#LINKS=LinkToR4
-
-[SimplexLogic]
-TYPE=Simplex
-RX=Rx1
-TX=Tx1
-#MODULES=ModuleHelp,ModuleParrot,ModuleFrn
-MODULES=ModuleParrot,ModuleFrn
-#Klicni znak vam dodeli Žiga:
-CALLSIGN=S5PMRxxx
-SHORT_IDENT_INTERVAL=0
-LONG_IDENT_INTERVAL=0
-EVENT_HANDLER=/usr/share/svxlink/events.tcl
-DEFAULT_LANG=en_US
-#-1 da je RGR disabled:
-RGR_SOUND_DELAY=-1
-#REPORT_CTCSS=123.0
-MACROS=Macros
-FX_GAIN_NORMAL=0
-FX_GAIN_LOW=-12
-
-[Rx1]
-TYPE=Local
-#Spremenimo iz 0 v 2 (ker smo zgoraj ugotovili, da je zvočna kartica št 2)
-AUDIO_DEV=alsa:plughw:2
-AUDIO_CHANNEL=0
-SQL_DET=VOX
-SQL_START_DELAY=300
-SQL_DELAY=50
-SQL_HANGTIME=1500
-VOX_FILTER_DEPTH=100
-VOX_THRESH=75
-DEEMPHASIS=0
-PEAK_METER=1
-DTMF_DEC_TYPE=INTERNAL
-DTMF_MUTING=1
-DTMF_HANGTIME=40
-DTMF_SERIAL=/dev/ttyS0
-#PREAMP=3
-PREAMP=2
-#SQL_TAIL_ELIM=100
-
-[Tx1]
-TYPE=Local
-AUDIO_DEV=alsa:plughw:2
-AUDIO_CHANNEL=0
-#LIMITER_THRESH=-6
-PTT_TYPE=SerialPin
-PTT_PORT=/dev/ttyACM0
-PTT_PIN=DTR!RTS
-TIMEOUT=300
-TX_DELAY=500
-#Preverite ali je bolje, če je PREEMPHASIS 1 ali 0 (odvisno od postaje)
-#PREEMPHASIS=1
-PREEMPHASIS=0
-DTMF_TONE_LENGTH=100
-DTMF_TONE_SPACING=50
-DTMF_DIGIT_PWR=-15
-#MASTER_GAIN=9
-```
-
-#### Uredimo ModuleFrn.conf (**NI ŠE KONČNA VERZIJA; v delu**):
+#### Uredimo ModuleFrn.conf:
 
 ```bash
 #naredimo varnostno kopijo nastavitev:
 sudo cp /etc/svxlink/svxlink.d/ModuleFrn.conf /etc/svxlink/svxlink.d/ModuleFrn.bkp
+
+#pridobimo datoteko:
+sudo wget https://tomaz1.github.io/PMR-FRN-SvxLink/etc/svxlink/svxlink.d/ModuleFrn.conf -O /etc/svxlink/svxlink.d/ModuleFrn.conf
+
 #vi ali nano, kar vam je bolj domače:
 #sudo nano /etc/svxlink/svxlink.d/ModuleFrn.conf
 sudo vi /etc/svxlink/svxlink.d/ModuleFrn.conf
 
+#vsebina datoteke:
 [ModuleFrn]
 NAME=Frn
 PLUGIN_NAME=Frn
@@ -301,21 +233,20 @@ rm -r ./en_US-heather-16k/
 #### Uredimo logiko, da se avtomatsko požene FRN modul:
 Gre za spremenjeno Tilnovo SimplexLogic.tcl datoteko!
 
-TODO zame, 15. 1. 25, https://github.com/sm0svx/svxlink/wiki/Events-Handling-System Naj se ne bi popravljalo direktno .tcl datotek, vendar dodalo mapo local in tja skopiralo datoteke .tcl in jih tam urejalo!
+TODO zame, 15. 1. 25, https://github.com/sm0svx/svxlink/wiki/Events-Handling-System Naj se ne bi popravljalo direktno .tcl datotek, vendar dodalo mapo local in tja skopiralo datoteke .tcl in se jih naj bi urejalo tam!
 
 [Datoteka SimplexLogic.tcl](../usr/share/svxlink/events.d/SimplexLogic.tcl)
 
-Gre za to, da ob zagonu programa takoj oz. 1 minuto po zagonu SvxLink programa avtomatsko aktivira FRN modul. Če kdo na SvxLinku z DTMF toni aktivira papigo (ali kakšen drug modul) bo le ta aktiven največ minuto, nato bo sistem sam preklopil nazaj v Frn način :)
-
 ```bash
-#vi ali nano, kar vam je bolj domače:
+#naredimo varnostno kopijo
+sudo cp /usr/share/svxlink/events.d/SimplexLogic.tcl /usr/share/svxlink/events.d/SimplexLogic.bkp
+
+#pridobimo Žigovo datoteko:
+sudo wget https://tomaz1.github.io/PMR-FRN-SvxLink/usr/share/svxlink/events.d/SimplexLogic.tcl -O /usr/share/svxlink/events.d/SimplexLogic.tcl
+
+#vi ali nano, kar vam je bolj domače, da si pogledamo vsebino in po potrebi popravimo:
 #sudo nano /usr/share/svxlink/events.d/SimplexLogic.tcl
 sudo vi /usr/share/svxlink/events.d/SimplexLogic.tcl
-#urediti začetek (nove spremenljivke)
-
-#in dodamo kodo v
-#proc every_minute {} {
-#    ...
 ```
 
 #### Da ob zagonu FRN modula tega ne govori v eter/internet:
@@ -417,7 +348,12 @@ Oddaljen SSH dostop je možen na več načinov, navodila za dostop z uporabo:
 
 Ali lahko še vedno uporabimo AIOC adapter? Prva verzija navodil:  [Priprava vezja in vezava](AIOC-PMR-extra.md)
 
-### 13.) 🔌/🔋 Napajanje
+### 13.) ⛓️ AIOC pini, če bi kdo potreboval
+
+Shema ni 100% pravilna, ampak za začetek nekaj je:
+![AIOC pins](../img/AIOC-PMR-extra-pinout.png)
+
+### 14.) 🔌/🔋 Napajanje
 (TODO)
 
 ### Pomoč / Viri
