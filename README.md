@@ -7,6 +7,8 @@ Novo: GitHub Pages (lepši izgled navodil): [https://tomaz1.github.io/PMR-FRN-Sv
 
 ### Uporabne povezave:
 
+Spletna stran PMR Slovenija:
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[PMR Slovenija - spletna stran https://pmr.si](https://pmr.si)**
 
 #### Discord skupina "PMR Slovenija":
@@ -15,9 +17,9 @@ Novo: GitHub Pages (lepši izgled navodil): [https://tomaz1.github.io/PMR-FRN-Sv
 
 #### PMR / FRN Povezave:
 
-  - [Slo-Tech forum](https://slo-tech.com/forum/t796344/0) (Prvi Redni PMR446 SKED V Sloveniji)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- [Slo-Tech forum](https://slo-tech.com/forum/t796344/0) (Prvi Redni PMR446 SKED V Sloveniji)
 
-  - [![Facebook](./img/image-facebook.png)](https://www.facebook.com/groups/355467710574815/)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- [![Facebook](./img/image-facebook.png)](https://www.facebook.com/groups/355467710574815/)
 
 ## Zahvale
 @Žiga<br>
