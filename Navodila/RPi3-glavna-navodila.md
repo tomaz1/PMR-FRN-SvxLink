@@ -351,7 +351,7 @@ Ali lahko še vedno uporabimo AIOC adapter? Prva verzija navodil:  [Priprava vez
 ### 13.) ⛓️ AIOC pini, če bi kdo potreboval
 
 Shema ni 100% pravilna, ampak za začetek nekaj je:
-![AIOC pins](../img/AIOC-PMR-extra-pinout.png =424x334)
+![AIOC pins](../img/AIOC-PMR-extra-pinout.png)
 
 ### 14.) 🔌/🔋 Napajanje
 (TODO)
