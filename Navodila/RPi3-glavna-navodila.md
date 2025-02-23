@@ -348,10 +348,11 @@ Oddaljen SSH dostop je možen na več načinov, navodila za dostop z uporabo:
 
 Ali lahko še vedno uporabimo AIOC adapter? Prva verzija navodil:  [Priprava vezja in vezava](AIOC-PMR-extra.md)
 
-### 13.) ⛓️ AIOC pini, če bi kdo potreboval
+### 13.) ⛓️ AIOC pini
 
 Shema ni 100% pravilna, ampak za začetek nekaj je:
-![AIOC pins](../img/AIOC-PMR-extra-pinout.png)
+
+<a href="../img/AIOC-PMR-extra-pinout.png"><img src="../img/AIOC-PMR-extra-pinout.png" alt="drawing" width="50%"/></a>
 
 ### 14.) 🔌/🔋 Napajanje
 (TODO)
