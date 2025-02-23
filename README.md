@@ -7,7 +7,7 @@ Novo: GitHub Pages (lepši izgled navodil): [https://tomaz1.github.io/PMR-FRN-Sv
 
 ### Uporabne povezave:
 
-Spletna stran PMR Slovenija:
+#### Spletna stran PMR Slovenija:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**[PMR Slovenija - spletna stran https://pmr.si](https://pmr.si)**
 
