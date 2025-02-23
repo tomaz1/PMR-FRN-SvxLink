@@ -160,7 +160,7 @@ sudo cp /etc/svxlink/svxlink.conf /etc/svxlink/svxlink.bkp
 #pridobimo Žigovo datoteko:
 sudo wget https://tomaz1.github.io/PMR-FRN-SvxLink/etc/svxlink/svxlink.conf -O /etc/svxlink/svxlink.conf
 
-#vi ali nano, kar vam je bolj domače, da si pogledamo vsebino in po potrebi popravimo:
+#uporabimo vi ali nano, kar vam je bolj domače, da si pogledamo vsebino in po potrebi popravimo:
 #sudo nano /etc/svxlink/svxlink.conf
 sudo vi /etc/svxlink/svxlink.conf
 ```
@@ -175,7 +175,7 @@ sudo cp /etc/svxlink/svxlink.d/ModuleFrn.conf /etc/svxlink/svxlink.d/ModuleFrn.b
 #pridobimo datoteko:
 sudo wget https://tomaz1.github.io/PMR-FRN-SvxLink/etc/svxlink/svxlink.d/ModuleFrn.conf -O /etc/svxlink/svxlink.d/ModuleFrn.conf
 
-#vi ali nano, kar vam je bolj domače:
+#uporabimo vi ali nano, kar vam je bolj domače, da si pogledamo vsebino in po potrebi popravimo:
 #sudo nano /etc/svxlink/svxlink.d/ModuleFrn.conf
 sudo vi /etc/svxlink/svxlink.d/ModuleFrn.conf
 
@@ -244,7 +244,7 @@ sudo cp /usr/share/svxlink/events.d/SimplexLogic.tcl /usr/share/svxlink/events.d
 #pridobimo Žigovo datoteko:
 sudo wget https://tomaz1.github.io/PMR-FRN-SvxLink/usr/share/svxlink/events.d/SimplexLogic.tcl -O /usr/share/svxlink/events.d/SimplexLogic.tcl
 
-#vi ali nano, kar vam je bolj domače, da si pogledamo vsebino in po potrebi popravimo:
+#uporabimo vi ali nano, kar vam je bolj domače, da si pogledamo vsebino in po potrebi popravimo:
 #sudo nano /usr/share/svxlink/events.d/SimplexLogic.tcl
 sudo vi /usr/share/svxlink/events.d/SimplexLogic.tcl
 ```
@@ -252,7 +252,7 @@ sudo vi /usr/share/svxlink/events.d/SimplexLogic.tcl
 #### Da ob zagonu FRN modula tega ne govori v eter/internet:
 
 ```bash
-#vi ali nano, kar vam je bolj domače:
+#uporabimo vi ali nano, kar vam je bolj domače, da si pogledamo vsebino in po potrebi popravimo:
 #sudo nano /usr/share/svxlink/events.d/Module.tcl
 sudo vi /usr/share/svxlink/events.d/Module.tcl
 
@@ -351,15 +351,15 @@ Ali lahko še vedno uporabimo AIOC adapter? Prva verzija navodil:  [Priprava vez
 ### 13.) ⛓️ AIOC pini, če bi kdo potreboval
 
 Shema ni 100% pravilna, ampak za začetek nekaj je:
-![AIOC pins](../img/AIOC-PMR-extra-pinout.png)
+
+![AIOC pins](../img/AIOC-PMR-extra-pinoutSmall.png)
 
 ### 14.) 🔌/🔋 Napajanje
 (TODO)
 
 ### Pomoč / Viri
-
-- #### [Navodila za namesitev FRN prehoda na sistemu Java FRN](https://slo-tech.com/forum/t834577/p8355681?fbclid=IwZXh0bgNhZW0CMTAAAR3apADiQJbOcgX9zCMiAXMCZ_xrUPe8YrlSoydmHYD4oyywWxe3iKNXdxw_aem_7KIs547M3SwynhY7aNpZ_Q#p8355681) (Slo-Tech forum)
-
+- **[PMR Slovenia - spletna stran https://pmr.si](https://pmr.si)**
+- [Navodila za namesitev FRN prehoda na sistemu Java FRN](https://slo-tech.com/forum/t834577/p8355681?fbclid=IwZXh0bgNhZW0CMTAAAR3apADiQJbOcgX9zCMiAXMCZ_xrUPe8YrlSoydmHYD4oyywWxe3iKNXdxw_aem_7KIs547M3SwynhY7aNpZ_Q#p8355681) (Slo-Tech forum)
 - [Github SvxLink](https://github.com/sm0svx/svxlink)
 - [SvxLink Discussions](https://groups.io/g/svxlink)
 - [AIOC adapter](https://github.com/skuep/AIOC)
@@ -369,10 +369,11 @@ Shema ni 100% pravilna, ampak za začetek nekaj je:
 @Žiga<br>
 @Tilen<br>
 @Franc (Radovljica)<br>
+@Evgen (spletna stran <a href="https://pmr.si">pmr.si</a>)<br>
 ... **TODO - Dodati še vse ostale**
 
 <hr>
-Datum: 12/2024 
+Datum: 02/2025 
 
 [@Tomaz1](https://github.com/tomaz1) - priprava navodil.
 
